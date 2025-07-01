@@ -1,8 +1,8 @@
 import React from 'react';
 import { X } from 'lucide-react';
-import { FIleViewerProps } from '../types';
+import { FileViewerProps } from '../types';
 
-export function FileViewer({ file, onClose }: FIleViewerProps) {
+export function FileViewer({ file, onClose }: FileViewerProps) {
   if (!file) return null;
 
   return (

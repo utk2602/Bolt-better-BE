@@ -1,10 +1,18 @@
-import React from "react";
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Home } from './pages/Home';
+import { Builder } from './pages/Builder';
+import { parseXml } from './steps';
 
-
-export default function App() {
+function App() {
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <p>Start prompting (or editing) to see magic happen :)</p>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/builder" element={<Builder />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
+
+export default App;
